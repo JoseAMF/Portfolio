@@ -80,7 +80,7 @@
                                 </h3>
                                 <div class="d-flex flex-row justify-content-center align-items-center ">
                                 	<ul>
-                                	    <li><span class="c-sharp btn" data-toggle="tooltip" data-placement="left" title="Serviços SOAP, Web APIs Rest, programas para Stress-Test de APIs, ferramentas de validação e manipulação de XMLs Complexos">&nbspC#</span></li>
+                                	    <li><span id="first" class="c-sharp btn" data-toggle="tooltip" data-placement="left" title="Serviços SOAP, Web APIs Rest, programas para Stress-Test de APIs, ferramentas de validação e manipulação de XMLs Complexos">&nbspC#</span></li>
                                 	    <!-- <li><span class="angular btn" data-toggle="tooltip" data-placement="left" title="Front de aplicativos multi-plataforma(Web, IOS, Android) construídos com Angular">&nbspAngular</span></li> -->
                                 	    <li><span class="centura btn" data-toggle="tooltip" data-placement="left" title="Sistemas para consórcio">&nbsp&nbspCentura</span></li>
                                 	    <li><span class="java btn" data-toggle="tooltip" data-placement="left" title="Aplicações web desenvolvidas em Spring para envio de informações a orgãos governamentais.">&nbspJava</span></li>
@@ -155,6 +155,15 @@ $("nav").toggleClass("bg-dark");
         }
         prevScrollpos = currentScrollPos;
 }
+        </script>
+
+        <script>
+            $(document).ready(function(){
+                $(window).on("scroll", function(){
+                    $('#first').tooltip().mouseover();
+                    setTimeout(function(){ $('[data-toggle="tooltip"]').tooltip('hide'); }, 2000);
+                        });
+                 });
         </script>
 </body>
 </html>
